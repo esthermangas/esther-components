@@ -5,11 +5,9 @@ import styles from './CheckBox.module.css'
 import classNames from "classnames";
 import {ColorType} from "../../typings";
 // @ts-ignore
-import {ReactComponent as Check} from './CheckBoxIcon.svg';
-// @ts-ignore
-import {ReactComponent as SmallCheck} from './CheckBoxIconSmall.svg'
 import {toRgba, toVariable} from "../../utils/color";
 import {useHover} from "../../utils/hooks";
+import Icon from '../Icon/Icon';
 
 type CheckBoxProps = {
     label?: string,
@@ -26,10 +24,6 @@ const CheckBox = (props: CheckBoxProps) => {
     const [data, setData] = useState(checked);
 
     const [ref, hover] = useHover();
-
-    const checkClasses = classNames(styles.check, {
-        [styles.checkChecked]: data,
-    });
     const handleChange = () => {
         setData(!data);
         if(onClick) {
@@ -42,6 +36,7 @@ const CheckBox = (props: CheckBoxProps) => {
 
     const spanClasses = classNames(styles.span, {
         [styles.spanSmall]: variant === "small",
+        [styles.spanMedium]: variant !== "small",
     });
 
     const rootClasses = classNames(styles.root, {
@@ -72,9 +67,7 @@ const CheckBox = (props: CheckBoxProps) => {
     return(
         <div onClick={handleChange} className={rootClasses} style={rootStyle} ref={ref}>
             <span style={checkBoxStyle} className={spanClasses}>
-                {variant === "medium" &&
-                <Check className={checkClasses}/>}
-                {variant === "small" && <SmallCheck className={checkClasses}/>}
+                { data &&  <Icon color={color} name="check" /> }
             </span>
             <label className={labelClasses}>{label}</label>
         </div>

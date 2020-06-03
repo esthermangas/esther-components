@@ -32,12 +32,18 @@
 }
 
 .span{
-    height: 16px;
-    width: 16px;
-    padding: 2px 4px 6px 4px;
+    display: inline-flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    transition: all 200ms;
 }
 .spanSmall {
-    height: 10px !important;
-    width: 10px !important;
-    padding: 1px 6px 6px 1px !important;
+    width: 16px;
+    height: 16px;
+}
+
+.spanMedium {
+    width: 24px;
+    height: 24px;
 }

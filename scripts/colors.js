@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const fs = require("fs");
 
 const colors = {
@@ -7,6 +8,7 @@ const colors = {
     tomato: "#E34954",
     sky: "#1991FF",
     pineapple: "#D9D86F",
+    dark: "#282828",
 
 };
 

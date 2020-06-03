@@ -5,5 +5,6 @@ export const colors = {
    tomato: "#E34954",
    sky: "#1991FF",
    pineapple: "#D9D86F",
-}
+   dark: "#282828",
+};
 

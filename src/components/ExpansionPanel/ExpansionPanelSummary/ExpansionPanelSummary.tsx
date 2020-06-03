@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 // @ts-ignore
 import styles from './ExpansionPanelSummary.module.css';
-// @ts-ignore
-import {ReactComponent as Chevron} from './up-chevron.svg';
+import Icon from '../../Icon/Icon';
+import classNames from "classnames";
 
 type ExpansionPanelSummaryProps = {
     children?: any,
@@ -14,23 +14,18 @@ type ExpansionPanelSummaryProps = {
 const ExpansionPanelSummary = (props: ExpansionPanelSummaryProps) => {
     const {children, onClick, open} = props;
 
-    const chevronStyle = {
-        transitionDuration: "0.3s",
-        transitionProperty: "transform",
-        width: 18,
-        height: 18,
-        cursor: "pointer",
-    };
 
-    if(open){
-        chevronStyle["transform"]= "rotate(180deg)";
-    }
+    const chevronClass = classNames(styles.chevron, {
+        [styles.chevronRotate]: open,
+    });
 
     return(
             <div className={styles.summary} onClick={onClick}>
                 <div className={styles.content}>{children}</div>
                 <div className={styles.iconContainer}>
-                    <Chevron style={chevronStyle} />
+                    <span className={chevronClass}>
+                        <Icon name="chevronDown" color="dark" />
+                    </span>
                 </div>
             </div>
     );

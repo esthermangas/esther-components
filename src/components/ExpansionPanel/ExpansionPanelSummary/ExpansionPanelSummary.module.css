@@ -18,3 +18,13 @@
     display: flex;
     flex-grow: 1;
 }
+
+.chevron > svg {
+    transition-duration: 0.3s;
+    transition-property: transform;
+    cursor: pointer;
+}
+
+.chevronRotate > svg {
+    transform: rotate(180deg);
+}
