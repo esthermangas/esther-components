@@ -1,0 +1,21 @@
+.fullWidth{
+    width: 100% !important;
+}
+
+.root{
+    width: 160px;
+    min-height: 40px ;
+    border-bottom: 1px solid #5c5c5c;
+}
+
+.label{
+    position: relative;
+    font-size: 12px;
+    font-family: var(--fontFamily);
+    font-weight: 500;
+
+}
+
+.labelNotFocus{
+    visibility: hidden;
+}

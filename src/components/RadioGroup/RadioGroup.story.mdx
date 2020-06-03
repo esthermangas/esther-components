@@ -1,0 +1,60 @@
+import {Meta, Preview, Props} from '@storybook/addon-docs/blocks';
+import RadioButton from '../RadioButton/RadioButton.tsx';
+import RadioGroup from './RadioGroup.tsx'
+
+<Meta title="Components|RadioGroup" />
+
+# RadioGroup
+
+<Props of={RadioGroup} />
+
+## Size
+
+RadioGroup come in two sizes by default "medium" and optionally "small".
+
+<Preview>
+        <RadioGroup label="RadioGroup medium" value="caqui2" >
+            <RadioButton value="caqui"> Radio button 1 </RadioButton>
+            <RadioButton value="caqui2"> Radio button 2 </RadioButton>
+            <RadioButton value="caqui3">  Radio button 3 </RadioButton>
+        </RadioGroup>
+        <RadioGroup label="RadioGroup small" value="caqui2" size="small" >
+                <RadioButton value="caqui"> Radio button 1 </RadioButton>
+                <RadioButton value="caqui2"> Radio button 2 </RadioButton>
+                <RadioButton value="caqui3">  Radio button 3 </RadioButton>
+            </RadioGroup>
+</Preview>
+
+## FullWidth
+
+This property changes the width of the RadioGroup allowing it to fill up to its parent width.
+
+<Preview>
+        <RadioGroup label="RadioGroup fullWidth"  fullWidth >
+            <RadioButton value="caqui"> Radio button 1 </RadioButton>
+            <RadioButton value="caqui2"> Radio button 2 </RadioButton>
+            <RadioButton value="caqui3">  Radio button 3 </RadioButton>
+        </RadioGroup>
+</Preview>
+
+## Color
+
+You can change the color of the RadioGroup with this property, but it only accepts one of our pre-defined colors that you can find [here](/?path=/docs/colors--page).
+
+<Preview>
+        <RadioGroup label="RadioGroup estherGreenColor" size="small" >
+            <RadioButton value="caqui"> Radio button 1 </RadioButton>
+            <RadioButton value="caqui2"> Radio button 2 </RadioButton>
+            <RadioButton value="caqui3">  Radio button 3 </RadioButton>
+        </RadioGroup>
+        <RadioGroup label="RadioGroup tomatoColor" size="small" color="tomato" >
+                    <RadioButton value="caqui"> Radio button 1 </RadioButton>
+                    <RadioButton value="caqui2"> Radio button 2 </RadioButton>
+                    <RadioButton value="caqui3">  Radio button 3 </RadioButton>
+        </RadioGroup>
+</Preview>
+
+## OnChange
+
+You can pass a callback function to this prop and it will be called every time the value changes and it will receive that value as the first parameter.
+

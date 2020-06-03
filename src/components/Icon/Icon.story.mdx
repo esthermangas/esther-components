@@ -1,0 +1,26 @@
+import {
+  Meta,
+  Preview,
+  Props,
+  IconItem,
+  IconGallery
+} from "@storybook/addon-docs/blocks";
+import { icons } from "../../variables/icons.ts";
+import Icon from "./Icon.tsx";
+
+<Meta title="Icon" />
+
+# Icon
+
+<Props of={Icon} />
+
+To select the icon you simply set the according name property using the below names.
+
+<br />
+<IconGallery>
+  {icons.map(name => (
+    <IconItem key={name} name={name}>
+      <Icon name={name} />
+    </IconItem>
+  ))}
+</IconGallery>

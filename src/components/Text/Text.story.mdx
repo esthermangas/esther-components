@@ -1,0 +1,100 @@
+import {Meta, Preview, Props} from '@storybook/addon-docs/blocks';
+import Text from './Text.tsx';
+
+<Meta title="Components|Text" />
+
+# Text
+
+<Props of={Text} />
+
+## tagHtml
+
+This property changes the final rendered HTML tag.
+
+<Preview>
+          <div>
+              <Text tagHtml='h1' >
+                  This is a h1 title
+              </Text>
+              <div>
+                  <Text display='inline-block'>
+                        This is a paragraph.
+                  </Text>
+                  <Text display='inline-block' tagHtml='span'>
+                        This is a span.
+                  </Text>
+              </div>
+          </div>
+</Preview>
+
+## Color
+
+You can change the color of the TextField with this property, but it only accepts one of our pre-defined colors that you can find [here](/?path=/docs/colors--page).
+The component TextField only applies the color property when the tagHtml is set to a "h" variant. Eg: h1 or h2.
+
+<Preview>
+          <div>
+              <Text tagHtml="h1" color='estherGreen' >
+                  This is a h1 title
+              </Text>
+              <Text tagHtml="h3" color="cadetBlue">
+                    This is a h3 title.
+              </Text>
+          </div>
+</Preview>
+
+## Paragraph
+
+This property adds a margin-bottom when set.
+
+<Preview>
+             <div>
+                 <Text width="300px" paragraph>
+                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis neque pellentesque, rutrum tortor sed, sagittis felis. Nunc ornare dolor eu laoreet sodales. Nulla dictum augue vel felis tempus, ut interdum massa mattis. Integer lectus nunc, volutpat in purus sed, dictum elementum orci. Donec ut congue dui. Nulla tincidunt molestie sem, in semper leo finibus in. Integer quis ipsum id tellus posuere dapibus id faucibus dui. Nunc a dictum purus, in accumsan ipsum.
+                 </Text>
+                 <Text width="300px">
+                      Morbi ultricies diam eget pulvinar rhoncus. Cras nec tortor ultricies, vehicula tellus vitae, hendrerit lacus. Vivamus vestibulum quis libero a tempor. Ut eget justo id dui tincidunt eleifend sed euismod purus. Cras et massa accumsan, porttitor nunc eget, vulputate nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis sit amet porta dolor. Praesent tempus sagittis pharetra. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                 </Text>
+             </div>
+   </Preview>
+
+## Display
+
+This property changes the position in respect to the other components.
+
+
+## Width
+
+This property changes the component's width.
+
+<Preview>
+             <div>
+                 <Text width="300px" paragraph>
+                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis neque pellentesque, rutrum tortor sed, sagittis felis. Nunc ornare dolor eu laoreet sodales. Nulla dictum augue vel felis tempus, ut interdum massa mattis. Integer lectus nunc, volutpat in purus sed, dictum elementum orci. Donec ut congue dui. Nulla tincidunt molestie sem, in semper leo finibus in. Integer quis ipsum id tellus posuere dapibus id faucibus dui. Nunc a dictum purus, in accumsan ipsum.
+                 </Text>
+                 <Text width="500px">
+                      Morbi ultricies diam eget pulvinar rhoncus. Cras nec tortor ultricies, vehicula tellus vitae, hendrerit lacus. Vivamus vestibulum quis libero a tempor. Ut eget justo id dui tincidunt eleifend sed euismod purus. Cras et massa accumsan, porttitor nunc eget, vulputate nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis sit amet porta dolor. Praesent tempus sagittis pharetra. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                 </Text>
+             </div>
+   </Preview>
+
+## Align
+
+This property changes the position of the text inside the component.
+
+<Preview>
+             <div>
+                 <Text width="600px" paragraph align="left">
+                      Morbi ultricies diam eget pulvinar rhoncus. Cras nec tortor ultricies, vehicula tellus vitae, hendrerit lacus. Vivamus vestibulum quis libero a tempor. Ut eget justo id dui tincidunt eleifend sed euismod purus. Cras et massa accumsan, porttitor nunc eget, vulputate nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis sit amet porta dolor. Praesent tempus sagittis pharetra. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                 </Text>
+                 <Text width="600px" paragraph align="center">
+                      Morbi ultricies diam eget pulvinar rhoncus. Cras nec tortor ultricies, vehicula tellus vitae, hendrerit lacus. Vivamus vestibulum quis libero a tempor. Ut eget justo id dui tincidunt eleifend sed euismod purus. Cras et massa accumsan, porttitor nunc eget, vulputate nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis sit amet porta dolor. Praesent tempus sagittis pharetra. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                 </Text>
+                 <Text width="600px" paragraph align="justify">
+                      Morbi ultricies diam eget pulvinar rhoncus. Cras nec tortor ultricies, vehicula tellus vitae, hendrerit lacus. Vivamus vestibulum quis libero a tempor. Ut eget justo id dui tincidunt eleifend sed euismod purus. Cras et massa accumsan, porttitor nunc eget, vulputate nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis sit amet porta dolor. Praesent tempus sagittis pharetra. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                 </Text>
+                 <Text width="600px" paragraph align="right">
+                      Morbi ultricies diam eget pulvinar rhoncus. Cras nec tortor ultricies, vehicula tellus vitae, hendrerit lacus. Vivamus vestibulum quis libero a tempor. Ut eget justo id dui tincidunt eleifend sed euismod purus. Cras et massa accumsan, porttitor nunc eget, vulputate nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis sit amet porta dolor. Praesent tempus sagittis pharetra. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                 </Text>
+             </div>
+   </Preview>

@@ -1,0 +1,5 @@
+.content{
+    font-size: 14px;
+    font-family: var(--fontFamily);
+    min-height: 50px;
+}

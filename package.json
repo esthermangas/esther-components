@@ -1,0 +1,105 @@
+{
+  "name": "esther-components",
+  "version": "1.0.0",
+  "description": "My custom components library",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "jsnext:main": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  },
+  "scripts": {
+    "start-react-app": "react-scripts start",
+    "test": "jest --passWithNoTests",
+    "test:watch": "jest --watch",
+    "lint": "eslint './src/**/*.{ts,tsx}'",
+    "lint:fix": "eslint --fix './src/**/*.{ts,tsx}'",
+    "build": "rollup -c",
+    "build:watch": "rollup -c -w",
+    "storybook": "start-storybook",
+    "storybook:build": "build-storybook -c .storybook -o storybook-static",
+    "generate:component": "node ./scripts/component",
+    "generate:colors": "node ./scripts/colors",
+    "generate:icons": "node ./scripts/icons"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "eslint",
+      "yarn test"
+    ],
+    "*.{css,json,md}": [
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "prop-types": "^15.7.2",
+    "typeface-lato": "0.0.75",
+    "typeface-modak": "0.0.71"
+  },
+  "peerDependencies": {
+    "react": "^15.0.0 || ^16.0.0",
+    "react-dom": "^15.0.0 || ^16.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "@storybook/addon-actions": "^5.3.8",
+    "@storybook/addon-docs": "^5.3.8",
+    "@storybook/addon-links": "^5.3.8",
+    "@storybook/addons": "^5.3.8",
+    "@storybook/preset-create-react-app": "^1.5.2",
+    "@storybook/react": "^5.3.8",
+    "@storybook/theming": "^5.3.7",
+    "@testing-library/jest-dom": "^5.5.0",
+    "@testing-library/react": "^10.0.2",
+    "@types/classnames": "^2.2.10",
+    "@types/jest": "^25.2.1",
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.6",
+    "@types/react-test-renderer": "^16.9.2",
+    "@types/testing-library__react": "^10.0.1",
+    "@typescript-eslint/eslint-plugin": "^2.27.0",
+    "@typescript-eslint/parser": "^2.27.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-config-react": "^1.1.7",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^3.0.0",
+    "husky": "^4.2.5",
+    "jest": "^25.3.0",
+    "jest-css-modules": "^2.1.0",
+    "lint-staged": ">=10",
+    "prettier": "^2.0.4",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-scripts": "^3.4.1",
+    "rollup": "^2.6.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-bundle-size": "^1.0.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.2",
+    "rollup-plugin-postcss": "^2.5.0",
+    "rollup-plugin-terser": "^5.3.0",
+    "rollup-plugin-typescript2": "^0.27.0",
+    "ts-jest": "^25.3.1",
+    "typescript": "^3.8.3",
+    "xml2js": "^0.4.23"
+  },
+  "files": [
+    "dist"
+  ]
+}

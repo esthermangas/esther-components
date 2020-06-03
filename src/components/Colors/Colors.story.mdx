@@ -1,0 +1,14 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs/blocks';
+import { colors } from '../../variables/colors';
+
+<Meta title="Colors" />
+
+# Colors
+
+You can use these variable name all through the library to style the components.addon
+
+<ColorPalette>
+    {Object.entries(colors).map(([name,value]) => {
+        return <ColorItem key={name} title={name} colors={[value]} />;
+    })}
+</ColorPalette>

@@ -1,0 +1,7 @@
+.actions{
+    font-size: 14px;
+    font-family: var(--fontFamily);
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+}

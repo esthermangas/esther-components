@@ -1,0 +1,41 @@
+/* Make preview expand fullheight */
+.css-79elbk {
+    height: 100%;
+    overflow: unset;
+}
+
+.css-gnhv4i {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.css-tmvzag:has(.css-1ocpa5l) {
+    margin-bottom: 200px;
+}
+
+/* Helper center class for preview */
+.center .css-gnhv4i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.floating .css-gnhv4i {
+    display: flex;
+    justify-content: center;
+    padding-left: 200px;
+    padding-top: 50px;
+    height: 250px;
+}
+
+.floating .css-gnhv4i>div {
+    margin-top: 0;
+}
+
+.center .css-gnhv4i>div {
+    margin-top: 0;
+}
+
+.first .css-gnhv4i:first-child {
+    padding-top: 100px;
+}

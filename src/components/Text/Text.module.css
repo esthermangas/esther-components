@@ -1,0 +1,9 @@
+.root{
+    font-family: var(--fontFamily);
+    vertical-align: top;
+    margin: 0 4px 0 4px;
+}
+
+.paragraph{
+    margin-bottom: 20px !important;
+}

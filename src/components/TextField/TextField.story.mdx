@@ -1,0 +1,29 @@
+import {Meta, Preview, Props} from '@storybook/addon-docs/blocks';
+import TextField from './TextField.tsx';
+
+<Meta title="Components|TextField" />
+
+# TextField
+
+<Props of={TextField} />
+
+## FullWidth
+
+This property changes the width of the TextField allowing it to fill up to its parent width.
+
+<Preview>
+    <TextField label="This is a Full TextField" fullWidth />
+</Preview>
+
+## Color
+
+You can change the color of the TextField with this property, but it only accepts one of our pre-defined colors that you can find [here](/?path=/docs/colors--page).
+
+<Preview>
+    <TextField label="This is a estherGreen TextField" value="greenEsther" />
+    <TextField label="This is a cadetBlue TextField" color="cadetBlue"  value="cadetBlue" />
+</Preview>
+
+## OnChange
+
+This is a function in charge to pick up the information saved in the inputs.

@@ -1,0 +1,19 @@
+.root{
+    width: 208px;
+    display: block;
+    align-items: center;
+    font-size: 14px;
+    font-family: var(--fontFamily);
+}
+.rootSmall{
+    width: 158px !important;
+    font-size: 12px !important;
+}
+
+.fullWidth{
+    width: 100% !important;
+}
+
+.label {
+    margin-bottom: 8px;
+}

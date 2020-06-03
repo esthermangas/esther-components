@@ -1,0 +1,50 @@
+import {
+  Meta,
+  Preview,
+  Props,
+  IconGallery,
+  IconItem
+} from "@storybook/addon-docs/blocks";
+import Spinner from "./Spinner.tsx";
+import { spinners } from "../../variables/spinners.ts";
+
+<Meta title="Spinner" />
+
+# Spinner
+
+<Props of={Spinner} />
+
+## Colors
+
+You can use values of the [design system colors](/?path=/docs/colors--page).
+
+<Preview>
+  <Spinner color="estherGreen" name="loadingCircle" />
+  <Spinner color="cadetBlue" name="loadingCircle" />
+  <Spinner color="tomato" name="loadingCircle" />
+  <Spinner color="sky" name="loadingCircle" />
+</Preview>
+
+## Size
+
+Control the pixel size of each spinner.
+
+<Preview>
+  <Spinner name="loadingCircle" />
+  <Spinner size={30} name="loadingCircle" />
+  <Spinner size={36} name="loadingCircle" />
+  <Spinner size={42} name="loadingCircle" />
+  <Spinner size={50} name="loadingCircle" />
+</Preview>
+
+## Gallery
+
+Similar to icons, you can supply any of the below names to create your desired spinner.
+
+<IconGallery>
+  {spinners.map(name => (
+    <IconItem key={name} name={name}>
+      <Spinner name={name} />
+    </IconItem>
+  ))}
+</IconGallery>

@@ -1,0 +1,41 @@
+import {Meta, Preview, Props} from '@storybook/addon-docs/blocks';
+import ExpansionPanel from './ExpansionPanel.tsx'
+import ExpansionPanelSummary from './ExpansionPanelSummary/ExpansionPanelSummary.tsx'
+import ExpansionPanelDetails from './ExpansionPanelDetails/ExpansionPanelDetails'
+
+<Meta title="Components|ExpansionPanel" />
+
+# ExpansionPanel
+
+<Props of={ExpansionPanel} />
+
+## Color
+
+You can change the color of the ExpansionPanel with this property, but it only accepts one of our pre-defined colors that you can find [here](/?path=/docs/colors--page).
+
+<Preview>
+    <ExpansionPanel>
+        <ExpansionPanelSummary>
+            ExpansionPanel estherGreenColor
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+            This is a expansion panel details.
+        </ExpansionPanelDetails>
+    </ExpansionPanel>
+    <ExpansionPanel color="sky" >
+            <ExpansionPanelSummary>
+                ExpansionPanel skyColor
+            </ExpansionPanelSummary>
+            <ExpansionPanelDetails>
+                This is a expansion panel details.
+            </ExpansionPanelDetails>
+        </ExpansionPanel>
+</Preview>
+
+## Open
+
+This property controls the state of the component opening or closing it.
+
+## OnChange
+
+You can pass a callback function to this prop and it will be called every time the panel is opened or closed and it will receive the state as the first parameter.

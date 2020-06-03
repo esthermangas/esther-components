@@ -1,0 +1,43 @@
+.label{
+    font-family: var(--fontFamily);
+    font-size: 16px;
+    margin-left: 8px;
+}
+.labelSmall{
+    font-size: 14px !important;
+}
+.root{
+    height: 50px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    border-radius: 8px;
+}
+
+.rootSmall{
+    height: 30px !important;
+    width: 150px !important;
+}
+.fullWidth{
+    width: 100% !important;
+}
+
+.check {
+    visibility: hidden;
+}
+
+.checkChecked {
+    visibility: visible !important;
+}
+
+.span{
+    height: 16px;
+    width: 16px;
+    padding: 2px 4px 6px 4px;
+}
+.spanSmall {
+    height: 10px !important;
+    width: 10px !important;
+    padding: 1px 6px 6px 1px !important;
+}

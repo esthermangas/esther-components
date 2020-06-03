@@ -1,0 +1,56 @@
+import {Meta, Preview, Props} from '@storybook/addon-docs/blocks';
+import Button from './Button.tsx';
+
+<Meta title="Components|Button" />
+
+# Button
+
+<Props of={Button} />
+
+## Size
+
+Buttons come in two sizes by default "small" and optionally "big".
+<Preview>
+    <Button label="A small button" />
+    <Button label="A very big Button" size="big" variant="primary" />
+</Preview>
+
+## Variant
+
+Also Buttons come with three types of variants. Default variant is "primary", and optionally "secondary" and "text". The two first mentioned have a border, the last one doesn't.
+
+<Preview>
+    <Button label="Primary" variant="primary" />
+    <Button label="Secondary" variant="secondary" />
+    <Button label="Text" variant="text" />
+</Preview>
+
+## Color
+
+You can change the color of the Button with this property, but it only accepts one of our pre-defined colors that you can find [here](/?path=/docs/colors--page).
+
+<Preview>
+    <Button label="estherGreen Color" color="estherGreen" />
+    <Button label="cadetBlue Color" color="cadetBlue" />
+    <Button label="estherGreen Color" color="estherGreen" variant="secondary" />
+    <Button label="cadetBlue Color" color="cadetBlue" variant="secondary" />
+</Preview>
+
+## FullWidth
+
+This property changes the width of the Button allowing it to fill up to its parent width.
+
+<Preview>
+    <Button label="With FullWidth" fullWidth />
+</Preview>
+
+
+## OnClick
+
+You can pass a callback function to this prop and it will be called every time the Button is clicked.
+
+<Preview>
+    <Button label="ClickMe" variant="primary" onClick={() => {alert("Hello, thanks for use my library!")} } />
+</Preview>
+
+

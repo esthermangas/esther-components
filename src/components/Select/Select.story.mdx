@@ -1,0 +1,48 @@
+import {Meta, Preview, Props} from '@storybook/addon-docs/blocks';
+import Select from './Select.tsx';
+import Item from '../Item/Item.tsx';
+
+<Meta title="Components|Select" />
+
+# Select
+
+<Props of={Select} />
+
+## FullWidth
+
+This property changes the width of the Select allowing it to fill up to its parent width.
+
+<Preview>
+    <Select label="Who are you?" fullWidth >
+        <Item value="01">Jose Manuel</Item>
+        <Item value="02">Esther</Item>
+    </Select>
+</Preview>
+
+## Color
+
+
+You can change the color of the Select with this property, but it only accepts one of our pre-defined colors that you can find [here](/?path=/docs/colors--page).
+The component Select only has color when you chose one of the items in the Select.
+
+<Preview>
+    <Select label="Who are you?" >
+        <Item value="01">Jose Manuel</Item>
+        <Item value="02">Esther</Item>
+    </Select>
+    <Select label="Who are you?" color="cadetBlue" >
+            <Item value="01">Jose Manuel</Item>
+            <Item value="02">Esther</Item>
+    </Select>
+</Preview>
+
+## OnChange
+
+This prop must receive a function whose first parameter will be the selected item value.
+
+<Preview>
+    <Select label="Who are you?" onChange={value=>alert(value)}>
+        <Item value="01" >Jose Manuel</Item>
+        <Item value="02" >Esther</Item>
+    </Select>
+</Preview>

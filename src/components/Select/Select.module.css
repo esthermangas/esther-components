@@ -1,0 +1,20 @@
+.select {
+    font-size: 14px;
+    width: 100%;
+    font-family: var(--fontFamily);
+    cursor: pointer;
+}
+
+.dropdown {
+    visibility: hidden;
+    font-family: var(--fontFamily);
+}
+
+.dropdownVisible {
+    visibility: visible !important;
+    width: calc(160px - 8px);
+}
+
+.dropdownFullWidth{
+    width: calc(100% - 8px) !important;
+}

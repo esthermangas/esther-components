@@ -1,0 +1,31 @@
+.span {
+    height: 16px;
+    width: 16px;
+    margin-right: 8px;
+}
+
+.spanSmall {
+    height: 12px !important;
+    width: 12px !important;
+    margin-right: 6px;
+}
+
+.root{
+    height: 40px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    font-size: 14px;
+    font-family: var(--fontFamily);
+    cursor: pointer;
+}
+.rootSmall{
+    height: 30px !important;
+    width: 150px !important;
+    font-size: 12px !important;
+}
+
+.fullWidth{
+    width: 100% !important;
+}

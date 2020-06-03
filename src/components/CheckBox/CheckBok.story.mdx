@@ -1,0 +1,47 @@
+import {Meta, Preview, Props} from '@storybook/addon-docs/blocks';
+import CheckBox from './CheckBox.tsx';
+
+<Meta title="Components|CheckBox" />
+
+# CheckBox
+
+<Props of={CheckBox} />
+
+## Color
+
+You can change the color of the Select with this property, but it only accepts one of our pre-defined colors that you can find [here](/?path=/docs/colors--page).
+
+<Preview>
+    <CheckBox label="estherGreen Color" />
+    <CheckBox label="cadetBlue Color" color="cadetBlue" />
+</Preview>
+
+## Checked
+
+This property is in charge of controlling if the component is active or not.
+
+<Preview>
+    <CheckBox label="Checked by default" checked/>
+    <CheckBox label="Not checked" />
+</Preview>
+
+## OnClick
+
+This prop must receive a function whose first parameter will be the value that check transitions to.
+
+## FullWidth
+
+This property changes the width of the Select allowing it to fill up to its parent width.
+
+<Preview>
+    <CheckBox label="FullWidth" fullWidth />
+</Preview>
+
+## Variant
+
+This property changes the size of the component. There are two sizes, small or medium.
+
+<Preview>
+    <CheckBox label="SmallCheckBox" variant="small" />
+    <CheckBox label="MediumCheckBox" />
+</Preview>

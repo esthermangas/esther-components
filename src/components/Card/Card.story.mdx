@@ -1,0 +1,27 @@
+import {Meta, Preview, Props} from '@storybook/addon-docs/blocks';
+import Card from './Card.tsx';
+import CardHeader from './CardHeader/CardHeader.tsx';
+import CardContent from './CardContent/CardContent.tsx';
+import CardActions from './CardActions/CardActions.tsx';
+import Button from '../Button/Button.tsx';
+
+<Meta title="Components|Card" />
+
+# Card
+
+<Props of={Card} />
+
+<Preview>
+    <Card>
+        Holi
+        <CardHeader>
+            HOLI
+        </CardHeader>
+        <CardContent>
+            CARACOLI
+        </CardContent>
+        <CardActions>
+            <Button label="Click Me" onClick={(e) => alert(e)} variant="text" />
+        </CardActions>
+    </Card>
+</Preview>
