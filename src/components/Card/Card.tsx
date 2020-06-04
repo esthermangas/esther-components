@@ -21,19 +21,19 @@ const Card = (props: CardProps) => {
 
     let header = null;
     React.Children.forEach(children, child => {
-        if(child.props && child.props.originalType.displayName === "CardHeader"){
+        if(child.props && child.props.originalType && child.props.originalType.displayName === "CardHeader"){
             header = child;
         }});
 
     let content = null;
     React.Children.forEach(children, child => {
-        if(child.props && child.props.originalType.displayName === "CardContent"){
+        if(child.props && child.props.originalType && child.props.originalType.displayName === "CardContent"){
             content = child;
         }});
 
     let actions = null;
     React.Children.forEach(children, child => {
-        if(child.props && child.props.originalType.displayName === "CardActions"){
+        if(child.props && child.props.originalType && child.props.originalType.displayName === "CardActions"){
             actions = child;
         }});
 
