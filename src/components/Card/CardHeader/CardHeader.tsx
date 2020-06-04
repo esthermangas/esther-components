@@ -6,7 +6,7 @@ import styles from './CardHeader.module.css'
 
 type CardHeaderProps = {
     children?: any,
-    isCardHeader: true,
+    isCardHeader?: true,
 }
 const CardHeader = (props: CardHeaderProps) => {
     const {children} = props;

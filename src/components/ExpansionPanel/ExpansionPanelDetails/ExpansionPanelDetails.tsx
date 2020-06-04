@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 type ExpansionPanelDetailsProps = {
     children?: any,
-    isExpansionDetails: boolean,
+    isExpansionDetails?: boolean,
 }
 
 const ExpansionPanelDetails = (props: ExpansionPanelDetailsProps) => {

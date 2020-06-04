@@ -6,7 +6,7 @@ import styles from './CardContent.module.css'
 
 type CardContentProps = {
     children?: any,
-    isCardContent: boolean,
+    isCardContent?: boolean,
 }
 const CardContent = (props: CardContentProps) => {
     const {children} = props;

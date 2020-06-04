@@ -9,7 +9,7 @@ type ExpansionPanelSummaryProps = {
     children?: any,
     onClick?: () => {},
     open?: boolean,
-    isExpansionSummary: boolean,
+    isExpansionSummary?: boolean,
 }
 
 const ExpansionPanelSummary = (props: ExpansionPanelSummaryProps) => {
