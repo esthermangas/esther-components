@@ -20,6 +20,7 @@ const CardHeader = (props: CardHeaderProps) => {
 };
 
 CardHeader.defaultProps = {
+    isCardHeader: true,
 };
 
 CardHeader.propTypes = {
