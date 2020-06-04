@@ -6,6 +6,7 @@ import styles from './CardActions.module.css'
 
 type CardActionsProps = {
     children?: any,
+    isCardAction: boolean,
 }
 const CardActions = (props: CardActionsProps) => {
     const {children} = props;
@@ -19,6 +20,7 @@ const CardActions = (props: CardActionsProps) => {
 };
 
 CardActions.defaultProps = {
+    isCardAction: true,
 };
 
 CardActions.propTypes = {

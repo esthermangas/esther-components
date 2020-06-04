@@ -6,6 +6,7 @@ import styles from './CardContent.module.css'
 
 type CardContentProps = {
     children?: any,
+    isCardContent: boolean,
 }
 const CardContent = (props: CardContentProps) => {
     const {children} = props;
@@ -19,6 +20,7 @@ const CardContent = (props: CardContentProps) => {
 };
 
 CardContent.defaultProps = {
+    isCardContent: true,
 };
 
 CardContent.propTypes = {

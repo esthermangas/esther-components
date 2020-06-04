@@ -33,13 +33,13 @@ const ExpansionPanel = (props: ExpansionPanelProps) => {
 
     let summary = null;
     React.Children.forEach(children, child => {
-        if(child.props && child.props.originalType && child.props.originalType.displayName === "ExpansionPanelSummary"){
+        if(child.props && child.props.isExpansionSummary){
             summary = child;
         }});
 
     let details = undefined;
     React.Children.forEach(children, child => {
-        if(child.propr && child.props.originalType && child.props.originalType.displayName === "ExpansionPanelDetails"){
+        if(child.props && child.props.isExpansionDetails){
             details = child;
         }});
 
