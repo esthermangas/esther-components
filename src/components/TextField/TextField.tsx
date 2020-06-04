@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import styles from "./TextField.module.css";
 import {ColorType} from "../../typings";
 import BaseInput from "../BaseInput/BaseInput";
+import {toVariable} from "../../utils/color";
 
 type TextFieldProps = {
     label: string,
@@ -14,7 +15,7 @@ type TextFieldProps = {
 }
 
 const TextField = (props: TextFieldProps) => {
-    const {label, value, onChange} = props;
+    const {label, value, onChange, color} = props;
     const[focus, setFocus] = useState(false);
     const [internalValue, setInternalValue] = useState(value);
 
@@ -37,10 +38,14 @@ const TextField = (props: TextFieldProps) => {
             setFocus(false);
         }
     };
+    const inputStyle = {};
+    if(focus) {
+        inputStyle['borderBottom'] = `2px solid ${toVariable(color)}`;
+    }
 
     return(
         <BaseInput {...props} focus={focus}>
-            <input className={styles.input}  onFocus={onFocusInput} onBlur={outFocusInput} placeholder={label} value={internalValue} onChange={handleChangeInternal}/>
+            <input className={styles.input} style={inputStyle} onFocus={onFocusInput} onBlur={outFocusInput} placeholder={label} value={internalValue} onChange={handleChangeInternal}/>
         </BaseInput>
     );
 };

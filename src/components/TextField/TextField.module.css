@@ -2,6 +2,7 @@
     border: none;
     font-size: 14px;
     width: 100%;
+    border-bottom: 1px solid #5c5c5c;
 }
 
 input:focus{

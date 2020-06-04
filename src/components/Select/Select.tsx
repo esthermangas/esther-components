@@ -5,6 +5,7 @@ import styles from './Select.module.css';
 import {ColorType} from "../../typings";
 import BaseInput from "../BaseInput/BaseInput";
 import classNames from "classnames";
+import {toVariable} from "../../utils/color";
 
 type SelectProps = {
     label: string,
@@ -16,7 +17,7 @@ type SelectProps = {
 }
 
 const Select = (props: SelectProps) => {
-    const {label, value, children, fullWidth, onChange} = props;
+    const {label, value, children, fullWidth, onChange, color} = props;
     const [openDrop, setOpenDrop] = useState(false);
     const [internalValue, setInternalValue] = useState(value);
     const [renderedText, setRenderedText] = useState(label);
@@ -76,6 +77,9 @@ const Select = (props: SelectProps) => {
 
     };
 
+    if(focus) {
+        selectStyle['borderBottom'] = `2px solid ${toVariable(color)}`;
+    }
 
     return(
         <>

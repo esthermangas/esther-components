@@ -3,6 +3,7 @@
     width: 100%;
     font-family: var(--fontFamily);
     cursor: pointer;
+    border-bottom: 1px solid #5c5c5c;
 }
 
 .dropdown {

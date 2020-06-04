@@ -31,16 +31,9 @@ const BaseInput = (props: BaseInputProps) => {
         color: toVariable(color),
     };
 
-    const rootStyle = {};
-
-    if(focus) {
-        rootStyle['borderBottom'] = `2px solid ${toVariable(color)}`;
-    }
-
-
     return(
 
-        <div className={classesRoot} style={rootStyle}>
+        <div className={classesRoot}>
             <label className={classesLabel} style={labelStyle} >{label}</label>
             {children}
         </div>
