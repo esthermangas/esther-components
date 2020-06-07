@@ -37,7 +37,6 @@ const Card = (props: CardProps) => {
         if(child.props && child.props.isCardAction) {
             actions = child;
         }});
-
     return(
         <div style={{...cardStyle, ...style}} className={styles.card}>
             <div>

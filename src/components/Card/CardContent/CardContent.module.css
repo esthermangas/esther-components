@@ -1,5 +1,6 @@
 .content{
     font-size: 14px;
     font-family: var(--fontFamily);
+    color: var(--dark);
     min-height: 50px;
 }

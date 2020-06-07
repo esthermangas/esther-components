@@ -13,15 +13,14 @@ import Button from '../Button/Button.tsx';
 
 <Preview>
     <Card>
-        Holi
-        <CardHeader>
-            HOLI
+        <CardHeader isCardHeader>
+            This is Card Header
         </CardHeader>
-        <CardContent>
-            CARACOLI
+        <CardContent isCardContent>
+            This is Card Content.
         </CardContent>
-        <CardActions>
-            <Button label="Click Me" onClick={(e) => alert(e)} variant="text" />
+        <CardActions isCardAction>
+            <Button label="Click Me" onClick={(e) => alert(e)} />
         </CardActions>
     </Card>
 </Preview>

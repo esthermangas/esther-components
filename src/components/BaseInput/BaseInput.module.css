@@ -5,12 +5,15 @@
 .root{
     width: 160px;
     min-height: 40px ;
+    font-family: var(--fontFamily);
+    color: var(--dark);
 }
 
 .label{
     position: relative;
     font-size: 12px;
     font-family: var(--fontFamily);
+    color: var(--dark);
     font-weight: 500;
 
 }

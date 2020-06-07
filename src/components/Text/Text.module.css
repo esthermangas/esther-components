@@ -1,5 +1,6 @@
 .root{
     font-family: var(--fontFamily);
+    color: var(--dark);
     vertical-align: top;
     margin: 0 4px 0 4px;
 }

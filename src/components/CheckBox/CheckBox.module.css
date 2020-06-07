@@ -1,5 +1,6 @@
 .label{
     font-family: var(--fontFamily);
+    color: var(--dark);
     font-size: 16px;
     margin-left: 8px;
 }
