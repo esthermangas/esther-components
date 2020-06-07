@@ -1,6 +1,6 @@
 {
   "name": "esther-components",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "My custom components library",
   "license": "MIT",
   "main": "dist/index.js",
