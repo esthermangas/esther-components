@@ -7,15 +7,60 @@ import Surface from './Surface.tsx';
 
 <Props of={Surface} />
 
+## Color
+
+You can change the color of the Surface with this property, but it only accepts one of our pre-defined colors that you can find [here](/?path=/docs/colors--page).
+<Preview>
+    <Surface height="150px" width="200px">
+        estherGreen Color (by Default)
+    </Surface>
+    <Surface height="150px" width="200px" color="cadetBlue">
+         cadetBlue Color
+    </Surface>
+    <Surface height="150px" width="200px" color="peach">
+        peach Color
+    </Surface>
+    <Surface height="150px" width="200px" color="sky">
+        sky Color
+    </Surface>
+    <Surface height="150px" width="200px" color="tomato">
+         tomato Color
+    </Surface>
+    <Surface height="150px" width="200px" color="pineapple">
+        pineapple Color
+    </Surface>
+</Preview>
+
+## Width and Height
+
+You can change width and height.
+
+## Square
+
+This prop changes the border type of the Surface. By default it is round.
 
 <Preview>
-    <Surface height="150px" width="200px" variant="outlined" square>
-        HOLIYA
+    <Surface height="150px" width="200px" >
+        When the prop square is false, the border is round.
+    </Surface>
+    <Surface height="150px" width="200px" square>
+        When the prop square is true, the border is square.
+    </Surface>
+</Preview>
+
+## Variant
+
+You can change the style of the component with this prop. There are three types, plain, outlined and elevation.
+
+<Preview>
+    <Surface height="150px" width="200px">
+        Plain variant.
+    </Surface>
+    <Surface height="150px" width="200px" variant="outlined">
+        Outlined variant.
     </Surface>
     <Surface height="150px" width="200px" variant="elevation">
-            HOLIYA
-        </Surface>
-        <Surface height="150px" width="200px">
-                HOLIYA
-            </Surface>
+        Elevation variant.
+    </Surface>
 </Preview>
+

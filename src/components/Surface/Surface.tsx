@@ -28,10 +28,10 @@ const Surface = (props: SurfaceProps) => {
     }
 
     if(variant === "outlined") {
-        surfaceStyle["border"] = '1px solid black';
+        surfaceStyle["border"] = `1px solid ${toRgba(color, 0.30)}`;
     }
 
-    const surfaceClass = classNames({
+    const surfaceClass = classNames(styles.root,{
         [styles.elevation]: variant === "elevation",
     });
 
