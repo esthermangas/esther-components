@@ -19,3 +19,4 @@ export { default as Text} from './components/Text/Text';
 export { default as TextField} from './components/TextField/TextField';
 export { default as Icon} from './components/Icon/Icon';
 export { default as Spinner} from './components/Spinner/Spinner';
+export { default as Surface} from './components/Surface/Surface';
