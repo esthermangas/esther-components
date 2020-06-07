@@ -25,7 +25,9 @@ const TextField = (props: TextFieldProps) => {
 
     const handleChangeInternal = (e: React.ChangeEvent<HTMLInputElement>) => {
         setInternalValue(e.target.value);
-        onChange(e);
+        if(onChange){
+            onChange(e)
+        }
     };
 
     const onFocusInput = (e: React.FocusEvent<HTMLInputElement>) => {
