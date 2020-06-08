@@ -3,4 +3,5 @@
 }
 .root{
     font-family: var(--fontFamily);
+    padding: 8px;
 }
