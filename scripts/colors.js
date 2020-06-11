@@ -9,6 +9,7 @@ const colors = {
     sky: "#1991FF",
     pineapple: "#D9D86F",
     dark: "#282828",
+    white: "#fffcf9",
 
 };
 

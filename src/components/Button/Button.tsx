@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import classNames from "classnames";
 // @ts-ignore
 import styles from "./Button.module.css";
-import {ColorType} from "../../typings";
+import {ColorType, IconType} from "../../typings";
 import {toRgba, toVariable} from "../../utils/color";
 import { useHover } from "../../utils/hooks";
+import Icon from "../Icon/Icon";
 
 type ButtonProps = {
     label: string,
@@ -13,11 +14,14 @@ type ButtonProps = {
     variant?: "primary" | "secondary" | "text",
     color?: ColorType,
     fullWidth?: boolean,
-    onClick?: (event: React.MouseEvent<HTMLElement>)=>{}
+    onClick?: (event: React.MouseEvent<HTMLElement>)=>{},
+    iconLeft?: IconType,
+    iconRight?: IconType,
+
 }
 
 const Button = (props: ButtonProps) => {
-    const { label, size, onClick, fullWidth, color, variant } = props;
+    const { label, size, onClick, fullWidth, color, variant, iconLeft, iconRight } = props;
 
     const [hoverRef, isHover] = useHover();
     const classesButton = classNames(styles.button, {
@@ -56,7 +60,18 @@ const Button = (props: ButtonProps) => {
 
     return (
             <button onClick={onClick} className={classesButton} style={buttonStyle} ref={hoverRef}>
-                {label}
+                {iconLeft &&
+                <span className={styles.iconLeft}>
+                    <Icon name={iconLeft} color="white"/>
+                </span>
+                }
+                <span>
+                    {label}
+                </span>
+                {iconRight &&
+                <span className={styles.iconRight}>
+                    <Icon name={iconRight} color="white"/>
+                </span> }
             </button>
     );
 };
@@ -76,6 +91,8 @@ Button.propTypes = {
     color: PropTypes.string,
     fullWidth: PropTypes.bool,
     onClick: PropTypes.func,
+    iconLeft: PropTypes.string,
+    iconRight: PropTypes.string,
 };
 
 export default Button;

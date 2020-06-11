@@ -5,4 +5,5 @@ export type ColorType =
 | "tomato"
 | "sky"
 | "pineapple"
-| "dark";
+| "dark"
+| "white";

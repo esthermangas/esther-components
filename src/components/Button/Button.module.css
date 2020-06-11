@@ -20,6 +20,9 @@
     -moz-appearance: none;
     cursor: pointer;
     font-family: var(--fontFamily);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .button:hover{
@@ -28,4 +31,12 @@
 
 button:focus {
     outline: none;
+}
+
+.iconRight {
+    padding-left: 4px;
+}
+
+.iconLeft {
+    padding-right: 4px;
 }
