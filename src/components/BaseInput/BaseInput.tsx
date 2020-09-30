@@ -12,10 +12,11 @@ type BaseInputProps = {
     fullWidth?: boolean,
     color?: ColorType,
     focus: boolean,
+    error?: boolean,
 };
 
 const BaseInput = (props: BaseInputProps) => {
-    const { label, fullWidth, color, children, focus} = props;
+    const { label, fullWidth, color, children, focus, error} = props;
 
 
     const classesRoot= classNames({
@@ -30,6 +31,9 @@ const BaseInput = (props: BaseInputProps) => {
     const labelStyle = {
         color: toVariable(color),
     };
+    if(error) {
+        labelStyle['color'] = `red`
+    }
 
     return(
 

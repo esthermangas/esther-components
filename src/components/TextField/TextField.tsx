@@ -12,10 +12,12 @@ type TextFieldProps = {
     color?: ColorType,
     value?: string,
     onChange?: (e: React.ChangeEvent<HTMLInputElement>)=>{},
+    error?: boolean,
+    password?: boolean
 }
 
 const TextField = (props: TextFieldProps) => {
-    const {label, value, onChange, color} = props;
+    const {label, value, onChange, color, error, password} = props;
     const[focus, setFocus] = useState(false);
     const [internalValue, setInternalValue] = useState(value);
 
@@ -44,10 +46,14 @@ const TextField = (props: TextFieldProps) => {
     if(focus) {
         inputStyle['borderBottom'] = `2px solid ${toVariable(color)}`;
     }
+    if(focus && error) {
+        inputStyle['borderBottom'] = `2px solid red`
+    }
 
     return(
         <BaseInput {...props} focus={focus}>
-            <input className={styles.input} style={inputStyle} onFocus={onFocusInput} onBlur={outFocusInput} placeholder={label} value={internalValue} onChange={handleChangeInternal}/>
+            <input className={styles.input} style={inputStyle} onFocus={onFocusInput} onBlur={outFocusInput}
+                   placeholder={label} value={internalValue} onChange={handleChangeInternal} type={password ?"password" :undefined}/>
         </BaseInput>
     );
 };
@@ -55,6 +61,8 @@ const TextField = (props: TextFieldProps) => {
 TextField.defaultProps = {
     fullWidth: false,
     color: 'estherGreen',
+    error: false,
+    password: false,
 };
 
 
@@ -63,6 +71,8 @@ TextField.propTypes = {
     fullWidth: PropTypes.bool,
     color: PropTypes.string,
     onChange: PropTypes.func,
+    error: PropTypes.bool,
+    password: PropTypes.bool,
 };
 
 export default TextField;

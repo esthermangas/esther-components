@@ -15,7 +15,7 @@ const Item = (props: ItemProps) => {
 
     const handleClick = () => {
         onClick(value)
-    }
+    };
 
     return(
         <div className={styles.item} onClick={handleClick}>
