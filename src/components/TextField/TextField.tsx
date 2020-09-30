@@ -14,13 +14,13 @@ type TextFieldProps = {
     onChange?: (e: React.ChangeEvent<HTMLInputElement>)=>{},
     error?: boolean,
     password?: boolean
+    infoMessage?: string
 }
 
 const TextField = (props: TextFieldProps) => {
     const {label, value, onChange, color, error, password} = props;
-    const[focus, setFocus] = useState(false);
+    const[focus, setFocus] = useState(error);
     const [internalValue, setInternalValue] = useState(value);
-
     if (internalValue && !focus) {
         setFocus(true);
     }
@@ -37,7 +37,7 @@ const TextField = (props: TextFieldProps) => {
         setFocus(true);
     };
     const outFocusInput = (e: React.FocusEvent<HTMLInputElement>) => {
-        if(!internalValue){
+        if(!internalValue && !error){
             e.target.placeholder = label;
             setFocus(false);
         }
@@ -53,7 +53,7 @@ const TextField = (props: TextFieldProps) => {
     return(
         <BaseInput {...props} focus={focus}>
             <input className={styles.input} style={inputStyle} onFocus={onFocusInput} onBlur={outFocusInput}
-                   placeholder={label} value={internalValue} onChange={handleChangeInternal} type={password ?"password" :undefined}/>
+                   placeholder={!error ?label :undefined} value={internalValue} onChange={handleChangeInternal} type={password ?"password" :undefined}/>
         </BaseInput>
     );
 };
@@ -73,6 +73,7 @@ TextField.propTypes = {
     onChange: PropTypes.func,
     error: PropTypes.bool,
     password: PropTypes.bool,
+    infoMessage: PropTypes.string,
 };
 
 export default TextField;

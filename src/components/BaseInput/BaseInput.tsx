@@ -13,10 +13,12 @@ type BaseInputProps = {
     color?: ColorType,
     focus: boolean,
     error?: boolean,
+    infoMessage?: string,
+
 };
 
 const BaseInput = (props: BaseInputProps) => {
-    const { label, fullWidth, color, children, focus, error} = props;
+    const { label, fullWidth, color, children, focus, error, infoMessage} = props;
 
 
     const classesRoot= classNames({
@@ -25,21 +27,27 @@ const BaseInput = (props: BaseInputProps) => {
 
 
     const classesLabel = classNames(styles.label, {
-        [styles.labelNotFocus] : !focus,
+        [styles.labelNotFocus] : !focus && !error,
     });
 
     const labelStyle = {
         color: toVariable(color),
     };
+    
+    const infoMessageStyle = {
+        color: toVariable(color),
+    };
     if(error) {
-        labelStyle['color'] = `red`
+        labelStyle['color'] = `red`;
+        infoMessageStyle['color'] = `red`;
     }
-
+    
     return(
 
         <div className={classesRoot}>
             <label className={classesLabel} style={labelStyle} >{label}</label>
             {children}
+            <span className={styles.infoMessage} style={infoMessageStyle}>{infoMessage}</span>
         </div>
     );
 };

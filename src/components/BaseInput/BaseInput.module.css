@@ -11,7 +11,7 @@
 
 .label{
     position: relative;
-    font-size: 12px;
+    font-size: 14px;
     font-family: var(--fontFamily);
     color: var(--dark);
     font-weight: 500;
@@ -20,4 +20,10 @@
 
 .labelNotFocus{
     visibility: hidden;
+}
+
+.infoMessage {
+    position: relative;
+    font-size: 12px;
+    font-family: var(--fontFamily);
 }
