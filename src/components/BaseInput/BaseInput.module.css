@@ -26,4 +26,6 @@
     position: relative;
     font-size: 12px;
     font-family: var(--fontFamily);
+    height: 12px;
+    width: 160px;
 }
