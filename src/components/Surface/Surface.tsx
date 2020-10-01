@@ -18,6 +18,12 @@ const Surface = (props: SurfaceProps) => {
     const {children, color, width, height, square, variant} = props;
 
     const surfaceStyle = {
+        backgroundColor: 'white',
+        width,
+        height,
+    };
+
+    const surfaceStyleColor = {
         backgroundColor: toRgba(color, 0.05),
         width,
         height,
@@ -31,13 +37,17 @@ const Surface = (props: SurfaceProps) => {
         surfaceStyle["border"] = `1px solid ${toRgba(color, 0.30)}`;
     }
 
-    const surfaceClass = classNames(styles.root,{
+    const surfaceClass = classNames({
         [styles.elevation]: variant === "elevation",
     });
 
     return(
         <div style={surfaceStyle} className={surfaceClass}>
-            {children}
+            <div className={styles.root} style={surfaceStyleColor}>
+                <div className={styles.childrenContainer}>
+                    {children}
+                </div>
+            </div>
         </div>
     );
 };
