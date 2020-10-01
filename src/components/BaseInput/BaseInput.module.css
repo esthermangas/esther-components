@@ -23,7 +23,7 @@
 }
 
 .infoMessage {
-    position: relative;
+    display: block;
     font-size: 12px;
     font-family: var(--fontFamily);
     height: 12px;
