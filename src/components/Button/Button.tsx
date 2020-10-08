@@ -62,7 +62,7 @@ const Button = (props: ButtonProps) => {
             <button onClick={onClick} className={classesButton} style={buttonStyle} ref={hoverRef}>
                 {iconLeft &&
                 <span className={styles.iconLeft}>
-                    <Icon name={iconLeft} color="white"/>
+                    <Icon name={iconLeft} color={variant === "text" ? color: "white"}/>
                 </span>
                 }
                 <span>
@@ -70,7 +70,7 @@ const Button = (props: ButtonProps) => {
                 </span>
                 {iconRight &&
                 <span className={styles.iconRight}>
-                    <Icon name={iconRight} color="white"/>
+                    <Icon name={iconRight} color={variant === "text" ? color: "white"}/>
                 </span> }
             </button>
     );
