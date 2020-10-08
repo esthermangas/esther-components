@@ -4,7 +4,3 @@
 .root{
     font-family: var(--fontFamily);
 }
-
-.childrenContainer {
-    padding: 8px
-}
