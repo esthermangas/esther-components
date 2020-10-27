@@ -1,0 +1,102 @@
+.anchor {
+  display: inline-block;
+}
+
+.dropdown {
+  animation: popup 150ms ease-in-out;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: var(--dark);
+  display: flex;
+  filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.25));
+  flex-direction: column;
+  font-family: var(--fontFamily);
+  min-height: 28px;
+  min-width: 28px;
+  padding: 8px 0;
+}
+
+.dropdown > *::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.dropdown > *::-webkit-scrollbar {
+  width: 4px;
+}
+
+.dropdown > *::-webkit-scrollbar-thumb {
+  border: 2px solid #b8b8b8;
+}
+
+.shape {
+  display: block;
+  width: 16px;
+  height: 16px;
+  clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+  border-radius: 0 5px;
+}
+
+.arrow {
+  display: block;
+  position: absolute;
+}
+
+div[data-popper-placement="bottom"] .arrow,
+div[data-popper-placement="bottom-start"] .arrow,
+div[data-popper-placement="bottom-end"] .arrow {
+  top: -7px;
+}
+
+div[data-popper-placement="top"] .arrow,
+div[data-popper-placement="top-end"] .arrow,
+div[data-popper-placement="top-start"] .arrow {
+  bottom: -7px;
+}
+
+div[data-popper-placement="left"] .arrow,
+div[data-popper-placement="left-start"] .arrow,
+div[data-popper-placement="left-end"] .arrow {
+  right: -7px;
+}
+
+div[data-popper-placement="right"] .arrow,
+div[data-popper-placement="right-start"] .arrow,
+div[data-popper-placement="right-end"] .arrow {
+  left: -7px;
+}
+
+div[data-popper-placement="bottom"] .shape,
+div[data-popper-placement="bottom-start"] .shape,
+div[data-popper-placement="bottom-end"] .shape {
+  transform: rotate(135deg);
+}
+
+div[data-popper-placement="top"] .shape,
+div[data-popper-placement="top-start"] .shape,
+div[data-popper-placement="top-end"] .shape {
+  transform: rotate(-45deg);
+}
+
+div[data-popper-placement="left"] .shape,
+div[data-popper-placement="left-start"] .shape,
+div[data-popper-placement="left-end"] .shape {
+  transform: rotate(-135deg);
+}
+
+div[data-popper-placement="right"] .shape,
+div[data-popper-placement="right-start"] .shape,
+div[data-popper-placement="right-end"] .shape {
+  transform: rotate(45deg);
+}
+
+@keyframes popup {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

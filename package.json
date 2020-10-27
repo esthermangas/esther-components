@@ -1,6 +1,6 @@
 {
   "name": "esther-components",
-  "version": "1.0.27",
+  "version": "1.0.28",
   "description": "My custom components library",
   "license": "MIT",
   "main": "dist/index.js",
@@ -44,8 +44,10 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "prop-types": "^15.7.2",
+    "react-popper": "^2.2.3",
     "typeface-lato": "0.0.75",
-    "typeface-modak": "0.0.71"
+    "typeface-modak": "0.0.71",
+    "@popperjs/core": "latest"
   },
   "peerDependencies": {
     "react": "^15.0.0 || ^16.0.0",
