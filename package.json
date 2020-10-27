@@ -1,6 +1,6 @@
 {
   "name": "esther-components",
-  "version": "1.0.28",
+  "version": "1.0.29",
   "description": "My custom components library",
   "license": "MIT",
   "main": "dist/index.js",
@@ -24,12 +24,6 @@
     "generate:component": "node ./scripts/component",
     "generate:colors": "node ./scripts/colors",
     "generate:icons": "node ./scripts/icons"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
   },
   "lint-staged": {
     "*.{ts,tsx}": [

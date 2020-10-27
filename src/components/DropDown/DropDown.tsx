@@ -7,6 +7,7 @@ import {
     VariationPlacement,
     ModifierArguments,
 } from "@popperjs/core";
+// @ts-ignore
 import classes from "./DropDown.module.css";
 import Portal from "./Portal/Portal";
 import { ColorType } from "../../typings";
